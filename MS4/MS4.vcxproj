@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C2BFF6ED-E34C-43AB-83A5-EB03EADAFCB1}</ProjectGuid>
+    <ProjectGuid>{A87A3E39-D9DD-44D8-A0BC-2F20E27025B0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>MS4</RootNamespace>
+    <RootNamespace>MS3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -77,14 +77,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ErrorMessage.cpp" />
+    <ClCompile Include="Allocator.cpp" />
     <ClCompile Include="ms4_tester.cpp" />
-    <ClCompile Include="NonPerishable.cpp" />
+    <ClCompile Include="MyProduct.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ErrorMessage.h" />
-    <ClInclude Include="NonPerishable.h" />
-    <ClInclude Include="Product.h" />
+    <ClInclude Include="iProduct.h" />
+    <ClInclude Include="MyProduct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
