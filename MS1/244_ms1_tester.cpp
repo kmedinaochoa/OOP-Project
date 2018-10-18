@@ -1,6 +1,6 @@
 // Final Project Milestone 1 - Date Module Tester
-// Version 3.4
-// ms1_tester_prof.cpp
+// Version 3.4.1
+// 244_ms1_tester_prof.cpp
 // Date	2018-10-17
 // Author	Chris Szalwinski, Fardad Soleimanloo
 // Description
@@ -91,10 +91,10 @@ int main() {
     }
   }
   if (ok) {
-    Date A(2018, 10, 18);
+    Date A(2019, 10, 18);
     Date B = A;
     cout << "Testing Date(int, int, int) constructor and operator>> overload; " << endl;
-    cout << "Enter the following date, 2018/10/18" << endl << ">";;
+    cout << "Enter the following date, 2019/10/18" << endl << ">";;
     cin >> B;
 
     if (!equalDates((const char*)&A, (const char*)&B)) {
@@ -109,8 +109,8 @@ int main() {
     cout << "Testing the logical operators: " << endl;
   }
   if (ok) {
-    Date A(2018, 10, 18);
-    Date B(2018, 10, 18);
+    Date A(2019, 10, 18);
+    Date B(2019, 10, 18);
     cout << "Testing operator==" << endl;
     if (A == B) {
       cout << "passed!" << endl;
@@ -122,8 +122,8 @@ int main() {
   }
 
   if (ok) {
-    Date A(2018, 10, 18);
-    Date B(2018, 10, 18);
+    Date A(2019, 10, 18);
+    Date B(2019, 10, 18);
     cout << "Testing operator>=" << endl;
     if (A >= B) {
       cout << "passed!" << endl;
@@ -135,8 +135,8 @@ int main() {
   }
 
   if (ok) {
-    Date A(2018, 10, 18);
-    Date B(2018, 10, 18);
+    Date A(2019, 10, 18);
+    Date B(2019, 10, 18);
     cout << "Testing operator<=" << endl;
     if (A <= B) {
       cout << "passed!" << endl;
@@ -148,8 +148,8 @@ int main() {
   }
 
   if (ok) {
-    Date A(2018, 10, 18);
-    Date B(2018, 10, 19);
+    Date A(2019, 10, 18);
+    Date B(2019, 10, 19);
     cout << "Testing operator!=" << endl;
     if (A != B) {
       cout << "passed!" << endl;
@@ -161,8 +161,8 @@ int main() {
   }
 
   if (ok) {
-    Date A(2018, 10, 18);
-    Date B(2018, 10, 19);
+    Date A(2019, 10, 18);
+    Date B(2019, 10, 19);
     cout << "Testing operator<" << endl;
     if (A < B) {
       cout << "passed!" << endl;
@@ -174,8 +174,8 @@ int main() {
   }
 
   if (ok) {
-    Date A(2018, 10, 18);
-    Date B(2018, 10, 19);
+    Date A(2019, 10, 18);
+    Date B(2019, 10, 19);
     cout << "Testing operator>" << endl;
     if (B > A) {
       cout << "passed!" << endl;
@@ -187,8 +187,8 @@ int main() {
   }
 
   if (ok) {
-    Date A(2018, 10, 18);
-    Date B(2018, 10, 19);
+    Date A(2019, 10, 18);
+    Date B(2019, 10, 19);
     cout << "Testing operator<=" << endl;
     if (A < B) {
       cout << "passed!" << endl;
@@ -200,8 +200,8 @@ int main() {
   }
 
   if (ok) {
-    Date A(2018, 10, 18);
-    Date B(2018, 10, 19);
+    Date A(2019, 10, 18);
+    Date B(2019, 10, 19);
     cout << "Testing operator>=" << endl;
     if (B >= A) {
       cout << "passed!" << endl;
@@ -279,6 +279,23 @@ int main() {
       ok = false;
     }
     cin.ignore(2000, '\n');
+  }
+
+  if (ok) {
+	  Date A;
+	  cout << "Testing minimum date validation, " << endl;
+	  cout << "Please enter the following string \"2018/12/29\": ";
+	  cin >> A;
+	  cout << "You accepted: " << A << endl;
+	  if (A.errCode() == PAST_ERROR) {
+		  cout << "Passed!" << endl;
+	  }
+	  else {
+		  cout << "Your read function does not check the minimum date limit after entry," << endl
+			  << "or it did not set _readErrorCode to PAST_ERROR" << endl;
+		  ok = false;
+	  }
+	  cin.ignore(2000, '\n');
   }
 
   if (ok) {

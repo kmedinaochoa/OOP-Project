@@ -5,9 +5,6 @@
 // Author
 // Description
 //
-//
-//
-//
 // Revision History
 // -----------------------------------------------------------
 // Name               Date                 Reason
@@ -15,7 +12,7 @@
 #ifndef AMA_DATE_H
 #define AMA_DATE_H
 
-namespace AMA {
+namespace aid {
 
   class Date {
 
