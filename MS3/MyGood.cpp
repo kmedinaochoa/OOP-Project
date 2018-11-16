@@ -1,6 +1,6 @@
 // Final Project - Milestone 3 - MyGood and Test Modules
-// Version 3.4
-// Date	2018-03-03
+// Version 3.4.1
+// Date	2018-11-15
 // MyGood.cpp
 // Author	Fardad Soleimanloo, Chris Szalwinski
 //
@@ -14,6 +14,7 @@
 // Chris              2018-03-02           Final Draft 20181
 // Chris              2018-03-03           ErrorMessage -> Error
 // Chris              2018-10-18           for Fall 2018
+// Chris              2018-11-15           price and cost ids changed
 /////////////////////////////////////////////////////////////////
 
 #include <iomanip>
@@ -35,11 +36,11 @@ namespace aid {
 	const char* MyGood::name() const { return Good::name(); }
 	const char* MyGood::unit() const { return Good::unit(); }
 	bool MyGood::taxed() const { return Good::taxed(); }
-	double MyGood::price() const { return Good::price(); }
-	double MyGood::cost() const { return Good::cost(); }
+	double MyGood::price() const { return Good::itemPrice(); }
+	double MyGood::cost() const { return Good::itemCost(); }
 
 	Test::Test(const char* file) : filename(file) { }
-	Test::Test(const char* file, const char* theSku, const char* theName) : 
+	Test::Test(const char* file, const char* theSku, const char* theName) :
 		product(theSku, theName, ""), filename(file) { }
 	std::fstream& Test::store(std::fstream& file, bool addNewLine) const {
 		if (!product.isEmpty()) {
