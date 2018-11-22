@@ -16,7 +16,7 @@
 
 namespace aid {
 
-	iGood* CreateProduct() {
+	iGood* CreateGood() {
 		return new MyGood("Good");
 	}
 	iGood* CreatePerishable() {

@@ -33,7 +33,7 @@ int main() {
   file.close();
 
   // create a Product without records
-  iGood* product = CreateProduct();
+  iGood* product = CreateGood();
 
   // populate the product with records from file
   file.open(FILE, ios::in);
